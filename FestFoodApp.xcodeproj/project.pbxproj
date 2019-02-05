@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		438C9AE92208E2E000346979 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438C9AE82208E2E000346979 /* AppDelegate.swift */; };
-		438C9AEB2208E2E000346979 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438C9AEA2208E2E000346979 /* ViewController.swift */; };
+		438C9AEB2208E2E000346979 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438C9AEA2208E2E000346979 /* CameraController.swift */; };
 		438C9AEE2208E2E000346979 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438C9AEC2208E2E000346979 /* Main.storyboard */; };
 		438C9AF02208E2E300346979 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 438C9AEF2208E2E300346979 /* Assets.xcassets */; };
 		438C9AF32208E2E300346979 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438C9AF12208E2E300346979 /* LaunchScreen.storyboard */; };
+		438C9AFC2208E40000346979 /* Sweet Hipster.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 438C9AFB2208E40000346979 /* Sweet Hipster.ttf */; };
+		438C9AFE2208E45200346979 /* ImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 438C9AFD2208E45200346979 /* ImageClassifier.mlmodel */; };
+		438C9B032209F28B00346979 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438C9B022209F28B00346979 /* AlertHelper.swift */; };
+		438C9B05220A493600346979 /* CoreMLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438C9B04220A493600346979 /* CoreMLHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		438C9AE52208E2E000346979 /* FestFoodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FestFoodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		438C9AE82208E2E000346979 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		438C9AEA2208E2E000346979 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		438C9AEA2208E2E000346979 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 		438C9AED2208E2E000346979 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		438C9AEF2208E2E300346979 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		438C9AF22208E2E300346979 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		438C9AF42208E2E300346979 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		438C9AFB2208E40000346979 /* Sweet Hipster.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sweet Hipster.ttf"; sourceTree = "<group>"; };
+		438C9AFD2208E45200346979 /* ImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ImageClassifier.mlmodel; sourceTree = "<group>"; };
+		438C9B022209F28B00346979 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
+		438C9B04220A493600346979 /* CoreMLHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMLHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,50 @@
 		438C9AE72208E2E000346979 /* FestFoodApp */ = {
 			isa = PBXGroup;
 			children = (
+				438C9B012209F27600346979 /* Model */,
+				438C9B002209F27000346979 /* View */,
+				438C9AFF2209F26A00346979 /* Controller */,
+				438C9AFA2208E3DE00346979 /* Ressources */,
 				438C9AE82208E2E000346979 /* AppDelegate.swift */,
-				438C9AEA2208E2E000346979 /* ViewController.swift */,
-				438C9AEC2208E2E000346979 /* Main.storyboard */,
+				438C9AF42208E2E300346979 /* Info.plist */,
 				438C9AEF2208E2E300346979 /* Assets.xcassets */,
 				438C9AF12208E2E300346979 /* LaunchScreen.storyboard */,
-				438C9AF42208E2E300346979 /* Info.plist */,
+				438C9AEC2208E2E000346979 /* Main.storyboard */,
 			);
 			path = FestFoodApp;
+			sourceTree = "<group>";
+		};
+		438C9AFA2208E3DE00346979 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				438C9AFB2208E40000346979 /* Sweet Hipster.ttf */,
+				438C9AFD2208E45200346979 /* ImageClassifier.mlmodel */,
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		438C9AFF2209F26A00346979 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				438C9AEA2208E2E000346979 /* CameraController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		438C9B002209F27000346979 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		438C9B012209F27600346979 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				438C9B022209F28B00346979 /* AlertHelper.swift */,
+				438C9B04220A493600346979 /* CoreMLHelper.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,6 +166,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				438C9AFC2208E40000346979 /* Sweet Hipster.ttf in Resources */,
 				438C9AF32208E2E300346979 /* LaunchScreen.storyboard in Resources */,
 				438C9AF02208E2E300346979 /* Assets.xcassets in Resources */,
 				438C9AEE2208E2E000346979 /* Main.storyboard in Resources */,
@@ -135,7 +180,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				438C9AEB2208E2E000346979 /* ViewController.swift in Sources */,
+				438C9B032209F28B00346979 /* AlertHelper.swift in Sources */,
+				438C9AEB2208E2E000346979 /* CameraController.swift in Sources */,
+				438C9B05220A493600346979 /* CoreMLHelper.swift in Sources */,
+				438C9AFE2208E45200346979 /* ImageClassifier.mlmodel in Sources */,
 				438C9AE92208E2E000346979 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
